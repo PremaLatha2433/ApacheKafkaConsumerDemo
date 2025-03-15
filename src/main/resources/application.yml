@@ -1,0 +1,26 @@
+server:
+  port: 9093
+spring:
+  kafka:
+#    consumer:
+#      bootstrap-servers: localhost:9092
+#      group-id: happy-group
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+#      properties:
+#        spring:
+#          json:
+#            trusted:
+#              packages: com.apache.kafka.pojo
+  datasource:
+    url: jdbc:mysql://localhost:3306/camel
+    username: root
+    password: Prema@2433
+    driver-class-name: com.mysql.cj.jdbc.Driver
+jpa:
+  database: mysql
+  hibernate:
+    ddl-auto: update
+    show-sql: true
+
+
