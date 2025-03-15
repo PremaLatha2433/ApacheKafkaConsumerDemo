@@ -15,19 +15,20 @@ public class KafkaListener {
             topics = "beHappyPremaLatha-1",
             groupId = "happy-group",
     topicPartitions = {@TopicPartition(topic ="beHappyPremaLatha-1",partitions = {"1"})})
-    public void consume(Customer message){
-        log.info("consumerGroup1 consume the message :{}",message.toString());
+    public void consume(Customer customer){
+
+        log.info("consumerGroup1 consume the message :{}",customer.toString());
     }
-    @org.springframework.kafka.annotation.KafkaListener(topics = "beHappyPremaLatha-1",groupId = "happy-group")
-    public void consume1(Customer message){
-        log.info("consumerGroup2 consume the message :{}",message.toString());
-    }
-    @org.springframework.kafka.annotation.KafkaListener(topics = "beHappyPremaLatha-1",groupId = "happy-group")
-    public void consume2(Customer message){
-        log.info("consumerGroup3 consume the message :{}",message.toString());
-    }
-    @org.springframework.kafka.annotation.KafkaListener(topics = "beHappyPremaLatha-1",groupId = "happy-group")
-    public void consume3(Customer message){
-        log.info("consumerGroup4 consume the message :{}",message.toString());
-    }
+//    @org.springframework.kafka.annotation.KafkaListener(topics = "beHappyPremaLatha-1",groupId = "happy-group")
+//    public void consume1(Customer message){
+//        log.info("consumerGroup2 consume the message :{}",message.toString());
+//    }
+//    @org.springframework.kafka.annotation.KafkaListener(topics = "beHappyPremaLatha-1",groupId = "happy-group")
+//    public void consume2(Customer message){
+//        log.info("consumerGroup3 consume the message :{}",message.toString());
+//    }
+//    @org.springframework.kafka.annotation.KafkaListener(topics = "beHappyPremaLatha-1",groupId = "happy-group")
+//    public void consume3(Customer message){
+//        log.info("consumerGroup4 consume the message :{}",message.toString());
+//    }
 }
